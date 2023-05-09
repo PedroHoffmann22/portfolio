@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Horas de vida</title>
+	<script>
+		function calcularHoras() {
+			var dataNascimento = document.getElementById("dataNascimento").value;
+			var dataAtual = new Date();
+			var diff = dataAtual - new Date(dataNascimento);
+			var horasVida = Math.floor(diff / 1000 / 60 / 60);
+			document.getElementById("horasVida").innerHTML = horasVida;
+		}
+	</script>
+</head>
+<body>
+	<h1>Horas de vida</h1>
+	<form>
+		<label for="dataNascimento">Data de nascimento:</label>
+		<input type="date" id="dataNascimento" name="dataNascimento"><br><br>
+		<button type="button" onclick="calcularHoras()">Calcular</button><br><br>
+		<label for="horasVida">Horas de vida:</label>
+		<span id="horasVida"></span>
+	</form>
+</body>
+</html>

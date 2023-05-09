@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conversão de Reais para Dólar</title>
+	<script>
+		function converter() {
+			var valorReal = parseFloat(document.getElementById("valorReal").value);
+			var cotacaoDolar = 5.50; // valor da cotação do dólar em reais
+			var valorDolar = valorReal / cotacaoDolar;
+			document.getElementById("valorDolar").innerHTML = valorDolar.toFixed(2);
+		}
+	</script>
+</head>
+<body>
+	<h1>Conversão de Reais para Dólar</h1>
+	<form>
+		<label for="valorReal">Valor em Reais:</label>
+		<input type="number" id="valorReal" name="valorReal"><br><br>
+		<button type="button" onclick="converter()">Converter</button><br><br>
+		<label for="valorDolar">Valor em Dólar:</label>
+		<span id="valorDolar"></span>
+	</form>
+</body>
+</html>
