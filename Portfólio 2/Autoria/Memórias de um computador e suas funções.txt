@@ -1,0 +1,23 @@
+RAM: A RAM é uma memória não volátil de acesso rápido usada pelo sistema operacional e pelos programas em execução.
+ Ele armazena temporariamente os dados e instruções necessários para a execução dos processos. A velocidade da RAM afeta diretamente a 
+velocidade geral do computador, mas é apagada quando o sistema é desligado.
+
+ROM: A ROM contém informações permanentes e somente leitura, como o firmware do sistema. É usado para armazenar o BIOS
+ ou UEFI, responsável por inicializar o computador quando ele é ligado. Ao contrário da RAM, o conteúdo da ROM não é perdido quando o computador
+ é desligado.
+
+Cache: Cache é uma memória de alta velocidade e pequena capacidade localizada perto da unidade central de processamento (CPU). 
+Ele armazena temporariamente os dados usados ​​com frequência para acelerar o acesso a esses dados e reduzir a necessidade de acessar a memória
+ mais lenta, como a RAM.
+
+Memória virtual: A memória virtual é uma combinação de espaço físico de armazenamento na RAM e espaço no disco rígido. 
+O sistema operacional usa essa técnica para gerenciar com eficiência o uso da memória, permitindo que os programas acessem mais memória do que
+ fisicamente disponível. Quando a RAM está cheia, os dados menos usados ​​são movidos para o disco.
+
+Armazenamento (disco rígido, SSD, etc.): É a memória utilizada para armazenar permanentemente dados como sistema operacional, aplicativos e
+ arquivos. Uma unidade de disco rígido tradicional (HDD) usa discos magnéticos giratórios para armazenamento, enquanto um SSD (Solid State Drive)
+ usa memória flash para acesso mais rápido.
+
+VRAM: VRAM é uma memória especializada encontrada em placas gráficas que é usada para armazenar temporariamente 
+texturas, imagens e outros dados necessários para renderizar gráficos em monitores. Permite um desempenho gráfico mais suave, especialmente 
+em jogos e aplicativos com muitos gráficos.

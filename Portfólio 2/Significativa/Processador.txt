@@ -1,0 +1,41 @@
+INTEL CORE
+
+História: A Intel Lançou a marca Core em 6 de janeiro de 2006, com o lançamento da CPU
+Yonah de 32 bits, Seu layout dual-core se assemelhava a duas CPUs da marca Pentium M
+interconectadas, empacotadas como um chip de silício.A série Core também é o primeiro
+processador Intel usado como CPU principal em um computador Apple Macintosh. O Core
+Duo foi a CPU da primeira geração do MacBook Pro, enquanto o Core Solo apareceu na
+linha Mac Mini da Apple. O Core Duo significou o início da mudança da Apple para os
+processadores Intel em toda a linha Mac.
+
+Arquitetura: Arquitetura de processador é um conjunto de instruções que
+decodificam e executam operações aritméticas e lógicas. A nova microarquitetura
+Efficient da Intel, conhecida anteriormente pelo codinome “Gracemont”, foi projetada para
+garantir a transferência eficiente de tarefas em segundo plano para multitarefas modernas.
+Essa é a microarquitetura x86 mais eficiente da Intel com um alvo agressivo de área de
+silício para que as cargas de trabalho de vários núcleos possam ser escaladas com o
+número de núcleos, oferecendo ainda uma ampla faixa de frequência. A microarquitetura
+Intel Core foi projetada pelo centro de desenvolvimento israelense da Intel, em Haifa, o mesmo
+que anteriormente havia projetado o Pentium M.
+Melhor uso: Os processadores Intel Core são ideais para gerenciamento do 3D, edição
+avançada de imagens e vídeo, jogos complexos e telas em 4K. O desempenho aumenta
+conforme o nível do processador, que vai de um i3 a um i9.
+Comparação com outro processador
+intel core i9-10900K
+número de núcleo: 10
+número de threads: 20
+clock básico:3.7GHz
+clock máximo:5.3GHz
+TDP padrão:125W
+frequência gráfica: 350 MHz
+preço sem desconto: R$3.500,00
+Ryzen 9 7900X
+número de núcleo: 12
+número de threads: 24
+clock básico:4.7GHz
+clock máximo:5.6GHz
+TDP padrão: 170W
+frequência gráfica: 2200 MHz
+preço sem desconto: R$4.250,00
+
+Link canva: https://www.canva.com/design/DAFltRwBZoI/Behf1hXaQPIuH2UXPYMXBQ/edit?utm_content=DAFltRwBZoI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton

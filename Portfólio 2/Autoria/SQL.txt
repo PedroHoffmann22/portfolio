@@ -1,0 +1,57 @@
+Tabelas sql para gestão financeira de uma oficina.
+CREATE TABLE Servicos (
+    ServicoPK INT PRIMARY KEY,
+    Nome VARCHAR(100),
+    Descricao TEXT,
+    Preco INT
+);
+
+INSERT INTO Servicos (ServicoPK, Nome, Descricao, Preco)
+VALUES
+    (1, 'Troca de Óleo', 'Troca de óleo e filtro do motor', 50),
+    (2, 'Revisão Completa', 'Revisão completa do veículo/motocicleta', 150),
+    (3, 'Substituição de Freios', 'Substituição das pastilhas de freio', 80);
+
+CREATE TABLE Clientes (
+    ClientePK INT PRIMARY KEY,
+    Nome VARCHAR(100),
+    Email VARCHAR(100),
+    Telefone VARCHAR(20)
+);
+
+INSERT INTO Clientes (ClientePK, Nome, Email, Telefone)
+VALUES
+    (1, 'Carlos Silva', 'carlos@example.com', '(11) 1234-5678'),
+    (2, 'Ana Oliveira', 'ana@example.com', '(21) 9876-5432'),
+    (3, 'Luiz Pereira', 'luiz@example.com', '(31) 5555-8888');
+
+CREATE TABLE Veiculos (
+    VeiculoPK INT PRIMARY KEY,
+    ClienteFK INT,
+    Tipo VARCHAR(50),
+    Modelo VARCHAR(50),
+    Ano INT,
+    FOREIGN KEY (ClienteFK) REFERENCES Clientes(ClientePK)
+);
+
+INSERT INTO Veiculos (VeiculoPK, ClienteFK, Tipo, Modelo, Ano)
+VALUES
+    (1, 1, 'Carro', 'Ford Focus', 2018),
+    (2, 2, 'Moto', 'Honda CB500', 2020),
+    (3, 3, 'Carro', 'Toyota Corolla', 2015);
+
+CREATE TABLE TransacoesFinanceiras (
+    TransacaoPK INT PRIMARY KEY,
+    ClienteFK INT,
+    ServicoFK INT,
+    Valor INT,
+    DataTransacao DATE,
+    FOREIGN KEY (ClienteFK) REFERENCES Clientes(ClientePK),
+    FOREIGN KEY (ServicoFK) REFERENCES Servicos(ServicoPK)
+);
+
+INSERT INTO TransacoesFinanceiras (TransacaoPK, ClienteFK, ServicoFK, Valor, DataTransacao)
+VALUES
+    (1, 1, 1, 50, '2023-08-01'),
+    (2, 2, 3, 80, '2023-08-02'),
+    (3, 3, 2, 150, '2023-08-03');
