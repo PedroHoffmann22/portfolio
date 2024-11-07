@@ -1,0 +1,120 @@
+1 - 
+CREATE TABLE Funcionarios (
+    Matricula INT PRIMARY KEY,
+    Nome VARCHAR(100),
+    DataNascimento DATE,
+    Nacionalidade VARCHAR(50),
+    Sexo CHAR(1),
+    Estado_Civil VARCHAR(20),
+    RG VARCHAR(20),
+    CIC VARCHAR(20),
+    Endereco VARCHAR(255),
+    Telefone VARCHAR(20),
+    Data_Admissao DATE
+);
+
+CREATE TABLE Cargos (
+    IDCargo INT PRIMARY KEY AUTO_INCREMENT,
+    Matricula INT,
+    Cargo VARCHAR(50),
+    DataInicio DATE,
+    DataFim DATE,
+    FOREIGN KEY (Matricula) REFERENCES Funcionarios(Matricula)
+);
+
+CREATE TABLE Dependentes (
+    ID_Dependente INT PRIMARY KEY AUTO_INCREMENT,
+    Matricula INT,
+    Nome VARCHAR(100),
+    DataNascimento DATE,
+    FOREIGN KEY (Matricula) REFERENCES Funcionarios(Matricula)
+);
+
+2 - 
+CREATE TABLE Paciente (
+    PacienteID SERIAL PRIMARY KEY,
+    Nome VARCHAR(100),
+    DataNascimento DATE,
+    Sexo VARCHAR(1),
+    EstadoCivil VARCHAR(50),
+    RG VARCHAR(20),
+    Telefone VARCHAR(20),
+    Endereco VARCHAR(100),
+    Convenio VARCHAR(100)
+);
+
+CREATE TABLE Medico (
+    CRM VARCHAR(20) PRIMARY KEY,
+    Nome VARCHAR(100)
+);
+
+CREATE TABLE Consulta (
+    ConsultaID SERIAL PRIMARY KEY,
+    PacienteID INTEGER REFERENCES Paciente(PacienteID),
+    MedicoCRM VARCHAR(20) REFERENCES Medico(CRM),
+    Data DATE,
+    Diagnostico TEXT
+);
+
+CREATE TABLE Exame (
+    ExameID SERIAL PRIMARY KEY,
+    ConsultaID INTEGER REFERENCES Consulta(ConsultaID),
+    TipoExame VARCHAR(100),
+    Data DATE,
+    Resultado TEXT
+);
+
+3 -
+CREATE TABLE Ordens_de_Compra (
+    Codigo_Ordem_de_compra SERIAL PRIMARY KEY,
+    Data_de_Emissao DATE,
+    Codigo_Fornecedor INT
+);
+
+CREATE TABLE Fornecedores (
+    Codigo_Fornecedor SERIAL PRIMARY KEY,
+    Nome_Fornecedor VARCHAR(100),
+    Endereco_Fornecedor VARCHAR(200)
+);
+
+CREATE TABLE Itens_da_Ordem_de_Compra (
+    Codigo_Ordem_de_compra INT,
+    Codigo_do_material INT,
+    Descricao VARCHAR(200),
+    Quantidade INT,
+    Valor_Unitario NUMERIC(10,2),
+    Valor_Total_Item NUMERIC(10,2),
+    PRIMARY KEY (Codigo_Ordem_de_compra, Codigo_do_material),
+    FOREIGN KEY (Codigo_Ordem_de_compra) REFERENCES Ordens_de_Compra(Codigo_Ordem_de_compra)
+);
+
+4 - 
+CREATE TABLE Projetos (
+    Codigo_Projeto INT PRIMARY KEY,
+    Nome_Projeto VARCHAR(100),
+    Data_Inicio DATE,
+    Data_Fim DATE,
+    Codigo_Departamento INT,
+    Codigo_Gerente INT,
+    FOREIGN KEY (Codigo_Departamento) REFERENCES Departamentos(Codigo_Departamento),
+    FOREIGN KEY (Codigo_Gerente) REFERENCES Empregados(Codigo_Empregados)
+);
+
+CREATE TABLE Departamentos (
+    Codigo_Departamento INT PRIMARY KEY,
+    Departamento VARCHAR(100)
+);
+
+CREATE TABLE Empregados (
+    Código Empregados INT PRIMARY KEY,
+    Nome VARCHAR(100)
+);
+
+CREATE TABLE Projeto_Empregados (
+    Codigo_Projeto INT,
+    Codigo_Empregados INT,
+    Numero_Horas_Trabalhadas INT,
+    PRIMARY KEY (Codigo_Projeto, Codigo_Empregados),
+    FOREIGN KEY (Codigo_Projeto) REFERENCES Projetos(Codigo_Projeto),
+    FOREIGN KEY (Codigo_Empregados) REFERENCES Empregados(Codigo_Empregados)
+);
